@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MovieCom- Book Your Ticket</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, skyblue, white);
+      padding: 30px;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4B0082;
+      font-weight: bold;
+    }
+
+    form {
+      background: linear-gradient(to bottom, white, skyblue);
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .seats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .seats label {
+      width: auto;
+      font-weight: normal;
+    }
+
+    .seats input {
+      margin-right: 5px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: red;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* use space-between or start if needed */
+      background: linear-gradient(to right, #00e5ff, #69f0ae, #00e5ff);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .logo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+
+
+    }
+
+    .navbar a {
+      color: #4B0082;
+      text-decoration: underline solid grey;
+
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 50px;
+
+    }
+
+    .navbar a:hover {
+      background-color: #ffffffaa;
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <br><br>
+  <nav class="navbar">
+
+    <a href="home.html">Home</a>
+    <a href="showing.html">Now Showing</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact_form.html" method="self">Message</a>
+  </nav>
+
+  <form id="bookingForm" action="booking.php" method="post">
+    <h2>Book Your Movie Ticket</h2>
+
+    <label for="name">Full Name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="movie">Select Movie:</label>
+    <select name="movie" id="movie" required>
+      <option value="">-- Select a Movie --</option>
+      <option>Raid 2</option>
+      <option>Bhool Chuk Maaf</option>
+      <option>Jaat</option>
+      <option>Guide</option>
+      <option>Animal</option>
+      <option>Jawan</option>
+      <option>3 idiots</option>
+      <option>Bahubali</option>
+      <option>Inception</option>
+      <option>The Shawshank Redemption</option>
+      <option>Interstellar</option>
+      <option>The Dark Knight</option>
+      <option>Parasite</option>
+
+    </select>
+
+    <label for="time">Show Time:</label>
+    <select name="time" id="time" required>
+      <option value="">-- Select Time --</option>
+      <option>10:00 AM</option>
+      <option>1:00 PM</option>
+      <option>4:00 PM</option>
+      <option>7:00 PM</option>
+    </select>
+
+    <label>Select Your Seats:</label>
+    <div class="seats" name="seats">
+      <label><input type="checkbox" name="seats[]" value="A1"> A1</label>
+      <label><input type="checkbox" name="seats[]" value="A2"> A2</label>
+      <label><input type="checkbox" name="seats[]" value="A3"> A3</label>
+      <label><input type="checkbox" name="seats[]" value="B1"> B1</label>
+      <label><input type="checkbox" name="seats[]" value="B2"> B2</label>
+      <label><input type="checkbox" name="seats[]" value="B3"> B3</label>
+    </div>
+
+    <button type="submit">Book Now</button>
+  </form>
+  <footer style="background-color: #4B0082; color: white; text-align: center; padding: 20px;">
+    <a href="home.html" style="color: white; margin: 0 15px; text-decoration: underline;">Home</a>
+    <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: underline;">Contact</a>
+    <a href="contact_form.html" style="color: white; margin: 0 15px; text-decoration: underline;">Message</a>
+    <a href="about.html" style="color: white; margin: 0 15px; text-decoration: underline;">About Us</a><br>
+    <p style="margin-top: 10px;">&copy; 2025 MovieCom. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

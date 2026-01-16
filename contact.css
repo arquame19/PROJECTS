@@ -1,0 +1,38 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, skyblue, white);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* ensures gradient fills screen */
+}
+
+
+.contact-card {
+  max-width: 500px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.contact-card p {
+  font-size: 16px;
+  margin: 12px 0;
+  color: #333;
+}
+
+.contact-card a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
